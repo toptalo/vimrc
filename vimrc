@@ -1,3 +1,4 @@
+set encoding=utf-8
 set nocp
 set ts=4
 set sw=4
@@ -21,7 +22,9 @@ set nrformats-=octal
 " Use pathogen plugin to load Plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
-call pathogen#infect()
+execute pathogen#infect()
+call pathogen#helptags()
+
 
 filetype plugin on
 filetype indent on
@@ -34,6 +37,6 @@ set laststatus=2
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ' '
 
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
