@@ -25,11 +25,11 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 call pathogen#helptags()
 
-
 filetype plugin on
 filetype indent on
 
-syntax enable
+syntax on
+color dracula
 
 " airline
 set laststatus=2
